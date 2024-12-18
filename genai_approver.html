@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prompt Approver</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #343a40;
+        }
+        table {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        thead th {
+            background-color: #007bff;
+            color: black;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #e9ecef;
+        }
+        .btn {
+            font-size: 0.9rem;
+        }
+        .approve-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .approve-btn:hover {
+            background-color: #218838;
+        }
+        .deny-btn {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .deny-btn:hover {
+            background-color: #c82333;
+        }
+        .table-actions {
+            white-space: nowrap;
+        }
+        .image-cell {
+            text-align: center;
+        }
+        .footer-btn {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .modal-dialog {
+            max-width: 800px;
+        }
+
+        #modalImage {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prompt Approver</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Select</th>
+                        <th scope="col">Order #</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Prompt</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="prompt-table">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="footer-btn">
+            <button class="btn btn-primary" onclick="approveSelected()">Approve Selected</button>
+        </div>
+    </div>
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" class="img-fluid" alt="Preview">
+                    <p id="modalPrompt" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Socket.io Script -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        const socket = io();
+        let imageModal;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        });
+
+        socket.on('getUnapprovedRecords', (prompts) => {
+            const table = document.getElementById('prompt-table');
+            table.innerHTML = '';
+
+            // Sort prompts by orderNumber in descending order
+            prompts.sort((a, b) => (b.orderNumber || 0) - (a.orderNumber || 0));
+
+            prompts.forEach(prompt => {
+                const row = document.createElement('tr');
+                row.setAttribute('data-id', prompt.id);
+                
+                row.innerHTML = `
+                    <td><input type="checkbox" class="form-check-input" value="${prompt.id}"></td>
+                    <td class="text-center">${prompt.orderNumber || 'N/A'}</td>
+                    <td class="image-cell">
+                        <button class="btn btn-info btn-sm" onclick="viewImage('${prompt.id}')">View Image</button>
+                    </td>
+                    <td>${prompt.prompt}</td>
+                    <td class="table-actions">
+                        <button class="btn btn-success btn-sm approve-btn" onclick="approvePrompt('${prompt.id}')">Approve</button>
+                        <button class="btn btn-danger btn-sm deny-btn" onclick="denyPrompt('${prompt.id}')">Deny</button>
+                    </td>
+                `;
+                
+                table.appendChild(row);
+            });
+        });
+
+        function viewImage(id) {
+            socket.emit('viewImage', id);
+        }
+
+        socket.on('imageData', function(data) {
+            if (data.error) {
+                alert('Error loading image: ' + data.error);
+                return;
+            }
+            
+            const modalImage = document.getElementById('modalImage');
+            const modalPrompt = document.getElementById('modalPrompt');
+            
+            modalImage.src = `data:image/png;base64,${data.imageData}`;
+            modalPrompt.textContent = data.prompt;
+            
+            imageModal.show();
+        });
+
+        function approvePrompt(id) {
+            socket.emit('approvePrompt', [id]);
+        }
+
+        function denyPrompt(id) {
+            socket.emit('denyPrompt', [id]);
+            const row = document.querySelector(`tr[data-id="${id}"]`);
+            if (row) {
+                row.remove();
+            }
+        }
+
+        function approveSelected() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const ids = Array.from(checkboxes).map(cb => cb.value);
+            if (ids.length > 0) {
+                socket.emit('approvePrompt', ids);
+            }
+        }
+
+        socket.emit('fetchApproverPrompts');
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

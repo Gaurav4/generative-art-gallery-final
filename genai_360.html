@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/gh/supermedium/aframe-fit-texture-component@1.0.0/dist/aframe-fit-texture-component.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <title>VR</title>
+  <style>
+    /* All existing styles remain unchanged */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('background.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    #qr-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .App {
+      text-align: center;
+    }
+
+    .App-header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      position: relative;
+      padding: 2rem;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: rgba(51, 51, 51, 0.8);
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 30px;
+      left: 25%;
+      transform: translateX(-50%);
+    }
+
+    .search-container input[type="text"] {
+      width: 200px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    .search-container button {
+      background-color: #61dafb;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-container button:hover {
+      background-color: #21a1f1;
+    }
+
+    .carousel-image-container {
+      position: relative;
+      width: 75%;
+      height: 75vh;
+      margin: 0 auto;
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    .aws-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .aws-logo img {
+      width: 150px;
+      height: auto;
+    }
+    /* Previous styles remain unchanged */
+    
+    .carousel-image-container {
+      position: relative;
+      width: 75%;
+      height: 75vh;
+      margin: 0 auto;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      border: 2px solid rgba(97, 218, 251, 0.5);
+      box-shadow: 0 0 20px rgba(97, 218, 251, 0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .carousel-image-container a-scene {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* VR canvas specific styling */
+    .a-canvas {
+      border-radius: 10px !important;
+      border: 3px solid rgba(97, 218, 251, 0.3) !important;
+      transition: border-color 0.3s ease;
+    }
+
+    .a-canvas:hover {
+      border-color: rgba(97, 218, 251, 0.6) !important;
+    }
+
+
+  </style>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+
+
+  <div class="App">
+    <header class="App-header">
+      <div class="search-container">
+          <input type="text" id="orderNumber" placeholder="Enter Order Number" />
+          <button onclick="fetchAndDisplayImage()">Load Image</button>
+      </div>
+      <div class="carousel-image-container">
+          <a-scene embedded 
+              vr-mode-ui="enabled: false"
+              renderer="antialias: true; 
+                      highRefreshRate: true; 
+                      physicallyCorrectLights: true;
+                      maxCanvasWidth: 4096;
+                      maxCanvasHeight: 4096;"
+              
+              loading-screen="dotsColor: red; backgroundColor: black">
+              
+              <!-- Enhanced camera settings for VR -->
+              <a-camera 
+              fov="150" 
+              wasd-controls-enabled="false" 
+              look-controls="enabled: true"
+              position="0 1.6 1"
+              zoom="1" 
+              near="0.1"
+              far="1000">
+             </a-camera>
+          
+
+              <!-- Optimized sky element -->
+              <a-sky 
+                  id="panorama" 
+                  src="" 
+                  fit-texture 
+                  rotation="0 -90 0"
+                  material="shader: flat; 
+                          npot: true;
+                          side: back;
+                          transparent: true;
+                          fog: false">
+              </a-sky>
+
+              <!-- Add ambient light for better visibility -->
+              <a-entity light="type: ambient; intensity: 1.5"></a-entity>
+          </a-scene>
+          
+          <div id="image-caption" class="image-caption"></div>
+      </div>
+    </header>
+  </div>
+
+
+  <script>
+    async function fetchAndDisplayImage() {
+        const orderNumber = document.getElementById('orderNumber').value;
+        if (!orderNumber) {
+            alert("Please enter an order number");
+            return;
+        }
+  
+        try {
+            const response = await fetch(`/getImagePath360?orderNumber=${orderNumber}`);
+            const data = await response.json();
+  
+            console.log('Server response:', data);
+  
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+  
+            // Construct the image URL from the Base64 data
+            const imageUrl = `data:image/png;base64,${data.imageData}`;
+  
+            // Update the A-Frame <a-sky> element's texture
+            const skyElement = document.getElementById('panorama');
+            skyElement.setAttribute('src', imageUrl);
+  
+            // Automatically enter VR mode
+            const sceneEl = document.querySelector('a-scene');
+            if (sceneEl && sceneEl.enterVR) {
+                sceneEl.enterVR(); // Enter VR mode programmatically
+            }
+  
+            // Handle QR Code generation for the order number
+            let qrContainer = document.getElementById('qr-container');
+            if (!qrContainer) {
+                qrContainer = document.createElement('div');
+                qrContainer.id = 'qr-container';
+                document.body.appendChild(qrContainer);
+            }
+  
+            // Clear previous QR code
+            qrContainer.innerHTML = '';
+  
+            // Generate a QR code that links directly to the image
+            new QRCode(qrContainer, {
+                text: `${window.location.origin}/serveImage?orderNumber=${orderNumber}`,
+                width: 128,
+                height: 128,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+  
+            // Update the caption with the prompt (if provided)
+            const captionElement = document.getElementById('image-caption');
+            captionElement.textContent = data.prompt || '';
+  
+        } catch (error) {
+            console.error('Error fetching image:', error);
+            alert("Failed to load the image. Please try again.");
+        }
+    }
+  </script>
+  
+
+  <div class="aws-logo">
+    <a href="https://aws.amazon.com/what-is-cloud-computing">
+      <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing">
+    </a>
+  </div>
+</body>
+</html>

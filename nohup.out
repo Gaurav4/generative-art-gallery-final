@@ -1,0 +1,1448 @@
+Server on!
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:89609) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:91003) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+Server on!
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at doListen (node:net:2116:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8080
+}
+
+Node.js v20.15.1
+Server on!
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at doListen (node:net:2116:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8080
+}
+
+Node.js v20.15.1
+Server on!
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at doListen (node:net:2116:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1925:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8080
+}
+
+Node.js v20.15.1
+Server on!
+(node:99085) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:5177) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:2364) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:244014) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+Scanning DynamoDB for order number: 1004
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1004,"sortkey":"20240805175449851","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/horse_in_the_wild_360_view_.png","prompt":"horse in the wild","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/76633e21-c982-4cc6-ae91-f2e98871359d.png","id":"4bf19342-9c8e-425b-bc0b-e5b947ec0c59","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: 4bf19342-9c8e-425b-bc0b-e5b947ec0c59.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1005
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1005,"sortkey":"20240801221643181","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/gladiators_on_a_battlefield_360_view_.png","prompt":"gladiators on a battlefield","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/d2f34bdb-f4bb-4284-abeb-b6aaebe54a5f.png","id":"c5b7146e-6350-4b1c-bbf4-67a46300d361","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: c5b7146e-6350-4b1c-bbf4-67a46300d361.png
+Image successfully fetched from S3
+New app connected.
+New app connected.
+New app connected.
+Scanning DynamoDB for order number: 1002
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1002,"sortkey":"20240801215720451","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/nice_home_in_texas_360_view_.png","prompt":"nice home in texas","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/28fd3172-2297-40b4-97aa-6aa58de772ae.png","id":"85792420-5090-46b5-ad5e-602f1383d084","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: 85792420-5090-46b5-ad5e-602f1383d084.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1004
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1004,"sortkey":"20240805175449851","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/horse_in_the_wild_360_view_.png","prompt":"horse in the wild","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/76633e21-c982-4cc6-ae91-f2e98871359d.png","id":"4bf19342-9c8e-425b-bc0b-e5b947ec0c59","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: 4bf19342-9c8e-425b-bc0b-e5b947ec0c59.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1003
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1003,"sortkey":"20240802002510660","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/Create_cottage_on_mountain_during_fall_with_waterfall_360_view__.png","prompt":"Create cottage on mountain during fall with waterfall","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/0b75e8b8-6102-4fe4-9068-d77b7a8423a4.png","id":"ef4c07a7-d129-4598-859c-ef15c883e440","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: ef4c07a7-d129-4598-859c-ef15c883e440.png
+Image successfully fetched from S3
+New app connected.
+New app connected.
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Scanning DynamoDB for order number: 1001
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1001,"sortkey":"20240801215659862","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/beautiful_home_in_california_360_view_.png","prompt":"beautiful home in california","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/28f949a0-63b9-4191-9dbe-fc9ac2bf84e1.png","id":"d4bf3728-bcbc-4991-9bf7-21fbb3859549","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: d4bf3728-bcbc-4991-9bf7-21fbb3859549.png
+Image successfully fetched from S3
+New app connected.
+New app connected.
+New app connected.
+Scanning DynamoDB for order number: 1002
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1002,"sortkey":"20240801215720451","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/nice_home_in_texas_360_view_.png","prompt":"nice home in texas","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/28fd3172-2297-40b4-97aa-6aa58de772ae.png","id":"85792420-5090-46b5-ad5e-602f1383d084","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: 85792420-5090-46b5-ad5e-602f1383d084.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1003
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1003,"sortkey":"20240802002510660","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/Create_cottage_on_mountain_during_fall_with_waterfall_360_view__.png","prompt":"Create cottage on mountain during fall with waterfall","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/0b75e8b8-6102-4fe4-9068-d77b7a8423a4.png","id":"ef4c07a7-d129-4598-859c-ef15c883e440","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: ef4c07a7-d129-4598-859c-ef15c883e440.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1004
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1004,"sortkey":"20240805175449851","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/horse_in_the_wild_360_view_.png","prompt":"horse in the wild","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/76633e21-c982-4cc6-ae91-f2e98871359d.png","id":"4bf19342-9c8e-425b-bc0b-e5b947ec0c59","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: 4bf19342-9c8e-425b-bc0b-e5b947ec0c59.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1005
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1005,"sortkey":"20240801221643181","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/gladiators_on_a_battlefield_360_view_.png","prompt":"gladiators on a battlefield","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/d2f34bdb-f4bb-4284-abeb-b6aaebe54a5f.png","id":"c5b7146e-6350-4b1c-bbf4-67a46300d361","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: c5b7146e-6350-4b1c-bbf4-67a46300d361.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1006
+Order found: {"modelid":"amazon.titan-image-generator-v1","approved":true,"orderNumber":1006,"sortkey":"20240905160644440","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/Create_a_cottage_on_mountain_near_waterfall_during_fall_foliage_360_view.png","prompt":"Create a cottage on mountain near waterfall during fall foliage","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/43f4117a-3323-4ab7-b635-86d11da6508f.png","id":"8b2843f0-91e9-47f8-976d-2eb04e75264c","modelname":"Amazon Titan"}
+Fetching image from S3 with key: 8b2843f0-91e9-47f8-976d-2eb04e75264c.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1000
+Order found: {"modelid":"stability.stable-diffusion-xl-v1","approved":true,"orderNumber":1000,"sortkey":"20240826200403288","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/house_on_a_beach_360_view_.png","prompt":"house on a beach","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/3a069052-678c-4f1d-8590-a197c86ba7b6.png","id":"8b688846-3cc5-4cfc-970c-87377b7dbebb","modelname":"Stable Diffusion"}
+Fetching image from S3 with key: 8b688846-3cc5-4cfc-970c-87377b7dbebb.png
+Image successfully fetched from S3
+New app connected.
+New app connected.
+New app connected.
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Christmas in Dublin with a pint of Guinness',
+      s3filepath: 'https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/d9bd762d-eb25-4c1e-91ff-16d7836b9a42.png',
+      id: 'd9bd762d-eb25-4c1e-91ff-16d7836b9a42'
+    },
+    {
+      approved: false,
+      prompt: 'Create Cottage in the mountain near water fall',
+      s3filepath: 'https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/82700b2d-b079-4fa4-9165-0e77744c0981.png',
+      id: '82700b2d-b079-4fa4-9165-0e77744c0981'
+    },
+    {
+      approved: false,
+      prompt: 'a big mansion on the hill with b,ue skies',
+      s3filepath: 'https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/60bda7d1-1edb-4c7e-8ace-0a1858911026.png',
+      id: '60bda7d1-1edb-4c7e-8ace-0a1858911026'
+    }
+  ],
+  Count: 3,
+  ScannedCount: 10
+}
+New app connected.
+Scanning DynamoDB for order number: 1006
+Order found: {"modelid":"amazon.titan-image-generator-v1","approved":true,"orderNumber":1006,"sortkey":"20240905160644440","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/Create_a_cottage_on_mountain_near_waterfall_during_fall_foliage_360_view.png","prompt":"Create a cottage on mountain near waterfall during fall foliage","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/43f4117a-3323-4ab7-b635-86d11da6508f.png","id":"8b2843f0-91e9-47f8-976d-2eb04e75264c","modelname":"Amazon Titan"}
+Fetching image from S3 with key: 8b2843f0-91e9-47f8-976d-2eb04e75264c.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1006
+Order found: {"modelid":"amazon.titan-image-generator-v1","approved":true,"orderNumber":1006,"sortkey":"20240905160644440","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/Create_a_cottage_on_mountain_near_waterfall_during_fall_foliage_360_view.png","prompt":"Create a cottage on mountain near waterfall during fall foliage","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/43f4117a-3323-4ab7-b635-86d11da6508f.png","id":"8b2843f0-91e9-47f8-976d-2eb04e75264c","modelname":"Amazon Titan"}
+Fetching image from S3 with key: 8b2843f0-91e9-47f8-976d-2eb04e75264c.png
+Image successfully fetched from S3
+Scanning DynamoDB for order number: 1006
+Order found: {"modelid":"amazon.titan-image-generator-v1","approved":true,"orderNumber":1006,"sortkey":"20240905160644440","s3filepath3d":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/Create_a_cottage_on_mountain_near_waterfall_during_fall_foliage_360_view.png","prompt":"Create a cottage on mountain near waterfall during fall foliage","s3filepath":"https://reinvent-generativeart-gallery.s3.us-west-2.amazonaws.com/43f4117a-3323-4ab7-b635-86d11da6508f.png","id":"8b2843f0-91e9-47f8-976d-2eb04e75264c","modelname":"Amazon Titan"}
+Fetching image from S3 with key: 8b2843f0-91e9-47f8-976d-2eb04e75264c.png
+Image successfully fetched from S3
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:726653) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Server on!
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:8080
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at doListen (node:net:2135:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1940:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8080
+}
+
+Node.js v20.18.0
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"a beautiful home with alot of people in the front having a cookout in the distance."},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+New app connected.
+New app connected.
+{"prompt":"Shiva on mountain"}
+New app connected.
+New app connected.
+New app connected.
+Server on!
+(node:1584384) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create a cottage in the mountain"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+ThrottlingException: Too many requests, please wait before trying again. You have sent too many requests.  Wait before trying again.
+    at de_ThrottlingExceptionRes (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:1146:21)
+    at de_CommandError (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:1005:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-serde/dist-cjs/index.js:35:20
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:165:18
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:34:22
+    at async invoke_bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/bedrock_client.js:32:30)
+    at async call_Bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:362:20)
+    at async Socket.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:293:7) {
+  '$fault': 'client',
+  '$metadata': {
+    httpStatusCode: 429,
+    requestId: 'cd0b4339-e6a7-456d-b962-b3f1251958e0',
+    extendedRequestId: undefined,
+    cfId: undefined,
+    attempts: 3,
+    totalRetryDelay: 390
+  }
+}
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create Mountain"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+ThrottlingException: Too many requests, please wait before trying again. You have sent too many requests.  Wait before trying again.
+    at de_ThrottlingExceptionRes (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:1146:21)
+    at de_CommandError (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:1005:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-serde/dist-cjs/index.js:35:20
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:165:18
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:34:22
+    at async invoke_bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/bedrock_client.js:32:30)
+    at async call_Bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:362:20)
+    at async Socket.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:293:7) {
+  '$fault': 'client',
+  '$metadata': {
+    httpStatusCode: 429,
+    requestId: '92cc87df-87bd-4b11-84e4-74c302fa652e',
+    extendedRequestId: undefined,
+    cfId: undefined,
+    attempts: 3,
+    totalRetryDelay: 605
+  }
+}
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an cottage"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+{"prompt":"Create an cottage"}
+{
+      "text_prompts":[
+          {
+              "text":"Create an cottage"
+          }],
+      "cfg_scale":10,
+      "seed":674789717,
+      "steps":50
+    }
+New app connected.
+New app connected.
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"a getaway resort in cozumel mexico, on a beachfront"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+New app connected.
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create mountain landscape 360 image"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"prompt":"Mountain and waterfall"}
+{"prompt":"Mountain and waterfall art"}
+{"prompt":"Mountain and waterfall art paiting"}
+Order number incremented to: 1015
+Record submitted with orderNumber: 1015
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Cottage with rainfall Mountain and waterfall art paiting"}
+Order number incremented to: 1016
+Record submitted with orderNumber: 1016
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'a delightful get away resort in hawaii with alot of people',
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/be8b2624-cb13-4139-942f-7a32ea9815a4.png',
+      id: 'be8b2624-cb13-4139-942f-7a32ea9815a4'
+    },
+    {
+      approved: false,
+      prompt: 'Cottage with rainfall Mountain and waterfall art paiting',
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/8677ec33-fcf3-4ee9-9b37-6ff261419943.png',
+      id: '8677ec33-fcf3-4ee9-9b37-6ff261419943'
+    },
+    {
+      approved: false,
+      prompt: 'Mountain and waterfall art paiting',
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/09156622-3e37-4610-9cc6-c1c196bfa3ff.png',
+      id: '09156622-3e37-4610-9cc6-c1c196bfa3ff'
+    }
+  ],
+  Count: 3,
+  ScannedCount: 11
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3555214095,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":2403089319,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3500098644,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 11 }
+New app connected.
+./start.sh: line 1: 1584384 Killed                  node js/server/prompt_server.js
+Server on!
+(node:1678855) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"prompt":"Cottage with rainfall Mountain and waterfall art paiting"}
+Scanning DynamoDB for order number: NaN
+Error fetching image from DynamoDB or S3: ValidationException: ExpressionAttributeValues contains invalid value: The parameter cannot be converted to a numeric value: NaN for key :orderNumber
+    at Request.extractError (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/protocol/json.js:80:27)
+    at Request.callListeners (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:686:14)
+    at Request.transition (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:688:12)
+    at Request.callListeners (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/sequential_executor.js:116:18) {
+  code: 'ValidationException',
+  '[__type]': 'See error.__type for details.',
+  time: 2024-11-08T21:13:16.727Z,
+  requestId: 'MAPRBH3NKIFFM5MQGGU79SPURVVV4KQNSO5AEMVJF66Q9ASUAAJG',
+  statusCode: 400,
+  retryable: false,
+  retryDelay: 1.1357850332202934
+}
+Scanning DynamoDB for order number: NaN
+Error fetching image from DynamoDB or S3: ValidationException: ExpressionAttributeValues contains invalid value: The parameter cannot be converted to a numeric value: NaN for key :orderNumber
+    at Request.extractError (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/protocol/json.js:80:27)
+    at Request.callListeners (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:686:14)
+    at Request.transition (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/request.js:688:12)
+    at Request.callListeners (/home/ec2-user/reinvent-generativeart-gallery/node_modules/aws-sdk/lib/sequential_executor.js:116:18) {
+  code: 'ValidationException',
+  '[__type]': 'See error.__type for details.',
+  time: 2024-11-08T21:13:16.825Z,
+  requestId: 'FMDE9JNE8BU659Q1KHI4SS8L2BVV4KQNSO5AEMVJF66Q9ASUAAJG',
+  statusCode: 400,
+  retryable: false,
+  retryDelay: 16.555594459200996
+}
+No order number provided
+Scanning DynamoDB for order number: 1014
+Order found: {"modelid":"amazon.titan-image-generator-v2:0","approved":true,"orderNumber":1014,"sortkey":"20241101132559182","prompt":"a delightful get away resort in hawaii with alot of people","s3filepath":"https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/3645d54e-2d37-4b8b-89d7-2e20d6c7dc95.png","id":"be8b2624-cb13-4139-942f-7a32ea9815a4","modelname":"Amazon Titan V2","expire":"1733529600"}
+Image URL constructed: https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/be8b2624-cb13-4139-942f-7a32ea9815a4.png
+Scanning DynamoDB for order number: 1014
+Order found: {"modelid":"amazon.titan-image-generator-v2:0","approved":true,"orderNumber":1014,"sortkey":"20241101132559182","prompt":"a delightful get away resort in hawaii with alot of people","s3filepath":"https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/3645d54e-2d37-4b8b-89d7-2e20d6c7dc95.png","id":"be8b2624-cb13-4139-942f-7a32ea9815a4","modelname":"Amazon Titan V2","expire":"1733529600"}
+Image URL constructed: https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/be8b2624-cb13-4139-942f-7a32ea9815a4.png
+Scanning DynamoDB for order number: 1009
+Order found: {"modelid":"amazon.titan-image-generator-v1","approved":true,"orderNumber":1009,"sortkey":"20241019132224441","prompt":"a getaway island in the middle of the Bahamas","s3filepath":"https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/28e48793-a335-48d4-b489-355ed43af0e3.png","id":"27d92994-e2fd-4f15-9225-7a95737c5023","modelname":"Amazon Titan","expire":"1733529600"}
+Image URL constructed: https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/27d92994-e2fd-4f15-9225-7a95737c5023.png
+Scanning DynamoDB for order number: 1009
+Order found: {"modelid":"amazon.titan-image-generator-v1","approved":true,"orderNumber":1009,"sortkey":"20241019132224441","prompt":"a getaway island in the middle of the Bahamas","s3filepath":"https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/28e48793-a335-48d4-b489-355ed43af0e3.png","id":"27d92994-e2fd-4f15-9225-7a95737c5023","modelname":"Amazon Titan","expire":"1733529600"}
+Image URL constructed: https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/27d92994-e2fd-4f15-9225-7a95737c5023.png
+New app connected.
+./start.sh: line 1: 1678855 Killed                  node js/server/prompt_server.js
+Server on!
+(node:1679527) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art piece with with flower and city sky scrapper"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+AccessDeniedException: User: arn:aws:sts::869935106692:assumed-role/reinvent-generativeart-gallery-server/i-02188633055f1ad4b is not authorized to perform: bedrock:InvokeModel on resource: arn:aws:bedrock:us-west-2:253490758946:provisioned-model/u66tkilspp3x because no resource-based policy allows the bedrock:InvokeModel action
+    at de_AccessDeniedExceptionRes (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:1038:21)
+    at de_CommandError (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:993:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-serde/dist-cjs/index.js:35:20
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:165:18
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:34:22
+    at async invoke_bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/bedrock_client.js:33:30)
+    at async call_Bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:362:20)
+    at async Socket.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:293:7) {
+  '$fault': 'client',
+  '$metadata': {
+    httpStatusCode: 403,
+    requestId: 'a01cffd6-4b73-43b8-a328-2a40984fdbbc',
+    extendedRequestId: undefined,
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  }
+}
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art piece with with flower and city sky scrapper"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+AccessDeniedException: User: arn:aws:sts::869935106692:assumed-role/reinvent-generativeart-gallery-server/i-02188633055f1ad4b is not authorized to perform: bedrock:InvokeModel on resource: arn:aws:bedrock:us-west-2:253490758946:provisioned-model/u66tkilspp3x because no resource-based policy allows the bedrock:InvokeModel action
+    at de_AccessDeniedExceptionRes (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:1038:21)
+    at de_CommandError (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/client-bedrock-runtime/dist-cjs/index.js:993:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-serde/dist-cjs/index.js:35:20
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:165:18
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38
+    at async /home/ec2-user/reinvent-generativeart-gallery/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:34:22
+    at async invoke_bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/bedrock_client.js:33:30)
+    at async call_Bedrock (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:362:20)
+    at async Socket.<anonymous> (/home/ec2-user/reinvent-generativeart-gallery/js/server/prompt_server.js:293:7) {
+  '$fault': 'client',
+  '$metadata': {
+    httpStatusCode: 403,
+    requestId: '715125ea-9064-4b4f-91d9-d4f48fe1f508',
+    extendedRequestId: undefined,
+    cfId: undefined,
+    attempts: 1,
+    totalRetryDelay: 0
+  }
+}
+New app connected.
+{"prompt":"Create an art piece with with flower and city sky scrapper"}
+Order number incremented to: 1017
+Record submitted with orderNumber: 1017
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art piece with with flower and city sky scrapper"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Order number incremented to: 1018
+Record submitted with orderNumber: 1018
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create a destination with mountain top during the fall foliage"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art piecce destination with mountain top during the fall foliage"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+{"prompt":"Create an art piecce destination with mountain top during the fall foliage"}
+Order number incremented to: 1019
+Record submitted with orderNumber: 1019
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create an art piece with with flower and city sky scrapper',
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/bc21f258-e68a-40ec-854e-8976a95b5537.png',
+      id: 'bc21f258-e68a-40ec-854e-8976a95b5537'
+    },
+    {
+      approved: false,
+      prompt: 'Create an art piecce destination with mountain top during the fall foliage',
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/06a828d1-0b53-4b16-8ca0-f8b399c3daad.png',
+      id: '06a828d1-0b53-4b16-8ca0-f8b399c3daad'
+    },
+    {
+      approved: false,
+      prompt: 'Create an art piece with with flower and city sky scrapper',
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/8a8b84a8-44b3-455f-96a2-58c035e37c5f.png',
+      id: '8a8b84a8-44b3-455f-96a2-58c035e37c5f'
+    }
+  ],
+  Count: 3,
+  ScannedCount: 14
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":2231688381,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":1561418458,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3007395084,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 14 }
+Server on!
+(node:1684083) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+{"prompt":"a beautiful get away resort in abuja"}
+{"prompt":"a beautiful get away resort in abuja. make sure the image is made for 360"}
+{"prompt":"a beautiful get away resort in abuja. make sure the image is made for a 360 view"}
+Order number incremented to: 1026
+Record submitted with orderNumber: 1026
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+No image found for the provided order number: 1026
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'a beautiful get away resort in abuja. make sure the image is made for a 360 view',
+      orderNumber: 1026,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/5cc9150e-bb89-46a1-91a5-dcfc4678f5ef.png',
+      id: '5cc9150e-bb89-46a1-91a5-dcfc4678f5ef'
+    }
+  ],
+  Count: 1,
+  ScannedCount: 21
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":910526516,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1026
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 21 }
+{"prompt":"a beautiful get away resort in italy. make sure the image is compatible with 360 view"}
+Order number incremented to: 1027
+Record submitted with orderNumber: 1027
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'a beautiful get away resort in italy. make sure the image is compatible with 360 view',
+      orderNumber: 1027,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/d152bf87-7ebc-45c7-80aa-5574425513af.png',
+      id: 'd152bf87-7ebc-45c7-80aa-5574425513af'
+    }
+  ],
+  Count: 1,
+  ScannedCount: 22
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":4167227626,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1027
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 22 }
+Server on!
+(node:1685322) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+
+Please migrate your code to use AWS SDK for JavaScript (v3).
+For more information, check the migration guide at https://a.co/7PzMCcy
+(Use `node --trace-warnings ...` to show where the warning was created)
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"prompt":"Create a mountain cottage in abstract format"}
+Order number incremented to: 1029
+Record submitted with orderNumber: 1029
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"prompt":"Create a beach painting with ship in the dark night"}
+Order number incremented to: 1030
+Record submitted with orderNumber: 1030
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create a beach painting with ship in the dark night"}
+Order number incremented to: 1031
+Record submitted with orderNumber: 1031
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create a beach painting with ship in the dark night"}
+Order number incremented to: 1032
+Record submitted with orderNumber: 1032
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create a secluded cottage painting with mountain in the dark night"}
+Order number incremented to: 1033
+Record submitted with orderNumber: 1033
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create a secluded cottage painting with mountain in the dark night"}
+Order number incremented to: 1034
+Record submitted with orderNumber: 1034
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create a secluded cottage painting with mountain in the dark night"}
+Order number incremented to: 1035
+Record submitted with orderNumber: 1035
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create a beach painting with ship in the dark night',
+      orderNumber: 1030,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/20a26991-f142-408b-bcb6-a6669ae20918.png',
+      id: '20a26991-f142-408b-bcb6-a6669ae20918'
+    },
+    {
+      approved: false,
+      prompt: 'Create a beach painting with ship in the dark night',
+      orderNumber: 1031,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/9ab83773-68e5-4323-a71c-ccc7e062f0cd.png',
+      id: '9ab83773-68e5-4323-a71c-ccc7e062f0cd'
+    },
+    {
+      approved: false,
+      prompt: 'Create a secluded cottage painting with mountain in the dark night',
+      orderNumber: 1035,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/a3ce6f86-028a-4d4a-a12e-035542311754.png',
+      id: 'a3ce6f86-028a-4d4a-a12e-035542311754'
+    },
+    {
+      approved: false,
+      prompt: 'Create a secluded cottage painting with mountain in the dark night',
+      orderNumber: 1033,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/8cecdfb3-05a5-4e6a-90e7-82210c0949aa.png',
+      id: '8cecdfb3-05a5-4e6a-90e7-82210c0949aa'
+    },
+    {
+      approved: false,
+      prompt: 'Create a mountain cottage in abstract format',
+      orderNumber: 1029,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/d8ba88a0-dfa8-4b31-94a4-c21fcadb84cd.png',
+      id: 'd8ba88a0-dfa8-4b31-94a4-c21fcadb84cd'
+    },
+    {
+      approved: false,
+      prompt: 'Create a secluded cottage painting with mountain in the dark night',
+      orderNumber: 1034,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/2e4118e3-80b5-471a-81ba-177e698fb1d9.png',
+      id: '2e4118e3-80b5-471a-81ba-177e698fb1d9'
+    },
+    {
+      approved: false,
+      prompt: 'Create a beach painting with ship in the dark night',
+      orderNumber: 1032,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/73120fd2-06d6-4bd1-a867-f4a325d95fee.png',
+      id: '73120fd2-06d6-4bd1-a867-f4a325d95fee'
+    }
+  ],
+  Count: 7,
+  ScannedCount: 30
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":709762271,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":2611742071,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":1295925189,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":2468293204,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":2818393664,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3792557235,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3258818798,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1032
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 30 }
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art painting of NYC in a dark night with full moon"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art painting of NYC in a dark night with full moon"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art painting of NYC in a dark night with full moon"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Error in calling Bedrock:
+Error: No value provided for input HTTP label: modelId.
+    at resolvedPath (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/smithy-client/dist-cjs/index.js:1126:11)
+    at /home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:392:57
+    at _RequestBuilder.build (/home/ec2-user/reinvent-generativeart-gallery/node_modules/@smithy/core/dist-cjs/index.js:358:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+{"prompt":"Create an art painting of NYC in a dark night with full moon"}
+Order number incremented to: 1033
+Record submitted with orderNumber: 1033
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create an art painting of NYC in a dark night with full moon',
+      orderNumber: 1033,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/841025c1-a6ca-4cd9-8750-198cffdfb5b1.png',
+      id: '841025c1-a6ca-4cd9-8750-198cffdfb5b1'
+    }
+  ],
+  Count: 1,
+  ScannedCount: 31
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":482623863,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1033
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 31 }
+{"taskType":"TEXT_IMAGE","textToImageParams":{"text":"Create an art painting of NYC in a dark night with full moon"},"imageGenerationConfig":{"numberOfImages":1,"quality":"premium","height":768,"width":1280,"cfgScale":7.5,"seed":42}}
+Order number incremented to: 1034
+Record submitted with orderNumber: 1034
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create an art painting of NYC in a dark night with full moon"}
+Order number incremented to: 1035
+Record submitted with orderNumber: 1035
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create an art painting of NYC in a dark night with full moon',
+      orderNumber: 1034,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/1fc2625d-7283-4ac5-ac8f-0717f9c6debb.png',
+      id: '1fc2625d-7283-4ac5-ac8f-0717f9c6debb'
+    },
+    {
+      approved: false,
+      prompt: 'Create an art painting of NYC in a dark night with full moon',
+      orderNumber: 1035,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/30d37c68-03fd-4de6-be3f-857bf284bb11.png',
+      id: '30d37c68-03fd-4de6-be3f-857bf284bb11'
+    }
+  ],
+  Count: 2,
+  ScannedCount: 33
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3071306272,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":387047880,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1035
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 33 }
+{"prompt":"Create an abstract painting of India festival holi of colors in palace"}
+Order number incremented to: 1036
+Record submitted with orderNumber: 1036
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create an abstract painting of India festival holi of colors in palace',
+      orderNumber: 1036,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/2e106eb4-8af1-4199-acf8-a58dd4cd9d3a.png',
+      id: '2e106eb4-8af1-4199-acf8-a58dd4cd9d3a'
+    }
+  ],
+  Count: 1,
+  ScannedCount: 34
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":3090353332,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1036
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 34 }
+{"prompt":"Create an abstract painting of India festival holi of colors in palace"}
+Order number incremented to: 1037
+Record submitted with orderNumber: 1037
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+{"prompt":"Create an 360 image of an abstract painting of India festival holi of colors in palace"}
+Order number incremented to: 1038
+Record submitted with orderNumber: 1038
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create an 360 image of an abstract painting of India festival holi of colors in palace',
+      orderNumber: 1038,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/d2523bb1-f01f-4f91-82fa-ff5ab574873b.png',
+      id: 'd2523bb1-f01f-4f91-82fa-ff5ab574873b'
+    },
+    {
+      approved: false,
+      prompt: 'Create an abstract painting of India festival holi of colors in palace',
+      orderNumber: 1037,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/6608686a-32f5-4ad8-8121-c4551d2f70e6.png',
+      id: '6608686a-32f5-4ad8-8121-c4551d2f70e6'
+    }
+  ],
+  Count: 2,
+  ScannedCount: 36
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":145433675,
+      "steps":50
+    }
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":719746324,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1037
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 36 }
+{"prompt":"Create an 360 image for VR devices of art gallery exhibition"}
+Order number incremented to: 1038
+Record submitted with orderNumber: 1038
+Current image key saved to /home/ec2-user/reinvent-generativeart-gallery/js/server/current_image_key.txt
+New app connected.
+Data from DynamoDB: {
+  Items: [
+    {
+      approved: false,
+      prompt: 'Create an 360 image for VR devices of art gallery exhibition',
+      orderNumber: 1038,
+      s3filepath: 'https://reinvent-generativeart-galleryv2.s3.us-west-2.amazonaws.com/e274ccf2-ca27-40bd-a19f-3495cd5004e9.png',
+      id: 'e274ccf2-ca27-40bd-a19f-3495cd5004e9'
+    }
+  ],
+  Count: 1,
+  ScannedCount: 37
+}
+{
+      "text_prompts":[
+          {
+              "text":"[object Object]"
+          }],
+      "cfg_scale":10,
+      "seed":1321605455,
+      "steps":50
+    }
+Approved items updated to true in gallery table
+Counter updated to order number: 1038
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 37 }
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+Data from DynamoDB: { Items: [], Count: 0, ScannedCount: 37 }
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+New app connected.
+{"prompt":"Create an 360 image for VR devices of art gallery exhibition"}
+New app connected.
+New app connected.

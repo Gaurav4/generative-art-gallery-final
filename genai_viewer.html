@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Carousel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .App {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .carousel-image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensure the entire image is visible */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-color: black; /* Add a background color to handle empty areas */
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: #ffffff;
+            padding: 15px 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+            max-width: 50%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption-label {
+            font-weight: 600;
+            color: #64B5F6;
+        }
+
+        .user-prompt, .llm-name {
+            color: #FFFFFF;
+        }
+    </style>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="App">
+        <div class="carousel-image-container">
+            <img id="carousel-image-1" class="carousel-image" src="" alt="Carousel Image 1">
+            <img id="carousel-image-2" class="carousel-image" src="" alt="Carousel Image 2">
+            <div id="image-caption-1" class="image-caption"></div>
+            <div id="image-caption-2" class="image-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+
+        let currentIndex = 0;
+        let images = [];
+        let activeImageIndex = 1;
+        let activeCaptionIndex = 1;
+
+        socket.on('updateCarousel', (receivedImages) => {
+            console.log('Received images:', receivedImages);
+            images = receivedImages;
+            currentIndex = 0;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            if (images.length === 0) return;
+
+            const currentImage = document.getElementById(`carousel-image-${activeImageIndex}`);
+            const nextImage = document.getElementById(`carousel-image-${activeImageIndex === 1 ? 2 : 1}`);
+            const currentCaption = document.getElementById(`image-caption-${activeCaptionIndex}`);
+            const nextCaption = document.getElementById(`image-caption-${activeCaptionIndex === 1 ? 2 : 1}`);
+            const imageData = images[currentIndex].imageData;
+
+            // Prepare next image and caption
+            nextImage.src = `data:image/png;base64,${imageData}`;
+            nextCaption.innerHTML = `
+                <span class="caption-label">User Prompt:</span> 
+                <span class="user-prompt">${images[currentIndex].prompt}</span><br>
+                <span class="caption-label">Amazon Bedrock LLM:</span> 
+                <span class="llm-name">${images[currentIndex].modelname}</span>
+            `;
+
+            // Start cross-fade animation
+            nextImage.style.opacity = 0;
+            nextCaption.style.opacity = 0;
+            nextCaption.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                nextImage.style.opacity = 1;
+                currentImage.style.opacity = 0;
+                
+                nextCaption.style.opacity = 1;
+                nextCaption.style.transform = 'translateY(0)';
+                currentCaption.style.opacity = 0;
+                currentCaption.style.transform = 'translateY(-20px)';
+
+                // Switch active elements
+                activeImageIndex = activeImageIndex === 1 ? 2 : 1;
+                activeCaptionIndex = activeCaptionIndex === 1 ? 2 : 1;
+
+                // Move to next image in array
+                currentIndex = (currentIndex + 1) % images.length;
+            }, 50);
+        }
+
+        // Start the carousel
+        setInterval(updateCarousel, 10000);
+    </script>
+</body>
+</html>

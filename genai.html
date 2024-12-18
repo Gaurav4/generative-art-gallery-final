@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://code.jquery.com 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net node_modules/socket.io;
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    media-src 'self';
+    ">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=47304000; includeSubDomains">
+    
+    
+    <title>AWS Generative AI Art Gallery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='node_modules/socket.io/client-dist/socket.io.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/client/genai.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url('fantasyholiday.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+    .container {
+        max-width: 900px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-top: 20vh; /* Updated to create 20% vertical space */
+    }
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: #1a5f7a;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 1.5rem;
+        background: linear-gradient(45deg, #1a5f7a, #22aeb6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    .btn-custom {
+        background-color: #31b39c;
+        border: none;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+        background-color: #28a085;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #prompt {
+        border-radius: 10px;
+        resize: none;
+        height: 100px;
+    }
+    #genimage {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .input-group {
+        margin-bottom: 1rem;
+    }
+    #gen_imagebox {
+        background-color: rgba(248, 249, 250, 0.8);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    #uploadform {
+        margin-top: 1rem;
+    }
+    .aws-logo {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .aws-logo img {
+        width: 150px;
+        height: auto;
+    }
+    .btn-custom.dropdown-toggle {
+        text-align: left;
+        padding: 0.375rem 0.75rem;
+        line-height: 1.2;
+        height: auto;
+        font-weight: 600;
+        font-size: 0.95rem;
+        min-width: 160px;
+        min-height: 38px;
+        white-space: normal;
+    }
+    .legal-disclaimer {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 0.75rem;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        border: 1px solid #dee2e6;
+    }
+    .legal-disclaimer h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        color: #1a5f7a;
+    }
+    h5.subtitle {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px; /* Slightly smaller than the title */
+        font-weight: 700;
+        color: #1a5f7a;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #1a5f7a, #22aeb6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: center;
+    }
+
+    .legal-disclaimer p {
+        margin-bottom: 0;
+    }
+
+.dropdown .btn-custom {
+    background-color: #31b39c;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 0.375rem 0.75rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+.dropdown .btn-custom:hover {
+    background-color: #28a085;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #e9f7f8;
+    color: #1a5f7a;
+    transform: translateX(5px);
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.me-3 {
+    margin-right: 1rem;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+    <div class="container py-4">
+        <h1 class="text-center">AWS Generative AI Art Gallery</h1>
+
+
+
+
+        <div class="row">
+
+
+
+            <div class="col-md-8">
+
+                <div class="d-flex align-items-center mb-3">
+                    <!-- "Choose LLM" Dropdown -->
+                    <div class="dropdown me-3">
+                        <button id="sample_button" class="btn btn-custom dropdown-toggle text-wrap" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-robot me-2"></i><span id="selected-llm">Choose LLM</span>
+                        </button>
+                        <ul id="bedrock-models" class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-modelid="amazon.nova-canvas-v1:0">Nova Canvas</a></li>
+                            <li><a class="dropdown-item" href="#" data-modelid="stability.stable-diffusion-xl-v1">Stable Diffusion</a></li>
+                            <li><a class="dropdown-item" href="#" data-modelid="amazon.titan-image-generator-v1">Amazon Titan</a></li>
+                            <li><a class="dropdown-item" href="#" data-modelid="amazon.titan-image-generator-v2:0">Amazon Titan V2</a></li>
+                            <li><a class="dropdown-item" href="#" data-modelid="stability.sd3-large-v1:0">Stable Diffusion 3 Large</a></li>
+                            <li><a class="dropdown-item" href="#" data-modelid="stability.stable-image-ultra-v1:0">Stable Image Ultra</a></li>
+                            <li><a class="dropdown-item" href="#" data-modelid="stability.stable-image-core-v1:0">Stable Image Core</a></li>
+                        </ul>
+                    </div>
+                
+                    <!-- Video Dropdown -->
+                    <div class="dropdown">
+                        <button id="video_button" class="btn btn-custom dropdown-toggle text-wrap" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-video me-2"></i><span id="selected-video">Choose Nova Reel Video</span>
+                        </button>
+                        <ul id="video_selector" class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-videoid="nova-videos-reinvent-2024/VacationResort.mp4">Video 1: Vacation Resort</a></li>
+                            <li><a class="dropdown-item" href="#" data-videoid="nova-videos-reinvent-2024/PaperPlane.mp4">Video 2: Paper Plane</a></li>
+                            <li><a class="dropdown-item" href="#" data-videoid="nova-videos-reinvent-2024/Japanese-room.mp4">Video 3: Japanese Room</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            <div id="loading-spinner" class="spinner-border text-primary" role="status" 
+                style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+
+            <textarea class="form-control" id="prompt" placeholder="Enter the description of your imaginative holiday destination"></textarea>
+            <div class="d-grid gap-2 mt-3">
+                <button id="run_button" type="button" class="btn btn-custom btn-lg">
+                    <span hidden id="run_button_spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span id="run_button_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-magic me-2" viewBox="0 0 16 16">
+                            <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"/>
+                        </svg>
+                        Generate Art
+                    </span>
+                </button>
+            </div>
+
+
+
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="legal-disclaimer">
+                    <h5><i class="fas fa-exclamation-circle me-1"></i> Legal Disclaimer</h5>
+                    <p>Do not input sensitive data. Prompts and generated images may be used during AWS re:Invent until 12/6/2024 but will not be stored beyond the event.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <br />
+        <br />
+
+        <!-- Dropdown for Example Prompts -->
+        <div class="mt-4">
+            <h5 class="subtitle">Need Help with a Prompt? Select & Edit One from Here!</h5>
+            <select id="example_prompts" class="form-select">
+                <option value="">---Choose an example prompt---</option>
+                <option value="Japanese onsen retreat in the snowy mountains, with hot spring baths and kaiseki dining">Japanese Onsen Escape...</option>
+                <option value="Maldivian underwater villa with coral reef views, snorkeling adventures, and private sunset dinners">Maldivian Underwater Paradise...</option>
+                <option value="Canadian lakefront lodge surrounded by pine forests, offering canoeing, ice fishing, and wood-fired saunas">Canadian Lakeside Haven...</option>
+                <option value="African savannah safari camp with luxury tents, big game drives, and sunset bonfires">African Safari Retreat...</option>
+                <option value="New Zealand cliffside villa with ocean views, vineyard tours, and outdoor hot tubs">New Zealand Coastal Escape...</option>
+                <option value="Italian countryside manor with vineyard tastings, truffle hunting, and olive grove picnics">Tuscan Countryside Bliss...</option>
+                <option value="Hawaiian jungle retreat with black sand beaches, waterfall swims, and luaus under the stars">Hawaiian Jungle Getaway...</option>
+                <option value="French château stay with wine cellar tours, lavender field walks, and gourmet Provençal cuisine">Provençal Château Experience...</option>
+                <option value="Australian outback glamping with kangaroo spotting, Aboriginal art tours, and campfire storytelling">Australian Outback Adventure...</option>
+                <option value="Peruvian Andes lodge with Inca trail hikes, mountain spa treatments, and panoramic valley views">Andean Mountain Sanctuary...</option>                           
+            </select>         
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Information</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center" id="infoModalBody"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div hidden id="gen_imagebox" class="text-center">
+            <img id="genimage" class="img-fluid mb-4">
+            <p id="contestsubmissionentry" class="mb-3 fs-5">Love this masterpiece? Share it with the world!</p>
+            <form id="uploadform">
+                <button id="upload_button" type="submit" class="btn btn-custom btn-lg">
+                    <span hidden id="upload_button_spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span id="upload_button_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload me-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                            <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                        </svg>
+                        Publish to Gallery
+                    </span>
+                </button>
+            </form>
+            <div id="qr-container" class="mt-3" style="display: none; position: fixed; bottom: 20px; right: 20px; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"></div>            
+            <div id="uploadresult" class="mt-3"></div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            // Initialize the page
+            $("#prompt").val(""); // Clear the prompt field on page load
+            localStorage.removeItem("promptValue"); // Remove any previous prompt value
+    
+            // Utility function to set button width dynamically based on text
+            function setButtonWidth(buttonId, text) {
+                const button = $(buttonId);
+                button.css('width', 'auto');
+                button.find('span').text(text);
+                const newWidth = button.outerWidth();
+                button.css('width', Math.max(newWidth, 160) + 'px');
+            }
+    
+            // Initialize LLM Dropdown
+            setButtonWidth('#sample_button', 'Choose LLM');
+    
+            // Handle "Choose LLM" dropdown item selection
+            $('#bedrock-models .dropdown-item').on('click', function (e) {
+                e.preventDefault();
+                const selectedLlmText = $(this).text();
+                const selectedModelId = $(this).data('modelid'); // Retrieve modelId
+                $('#sample_button').data('modelid', selectedModelId); // Store modelId in the button
+                setButtonWidth('#sample_button', selectedLlmText); // Update button text
+            });
+    
+
+            $('#run_button').on('click', async function () {
+                const modelId = $('#sample_button').data('modelid');
+                const prompt = $('#prompt').val().trim();
+
+                // Validate model selection first
+                if (!modelId || $('#sample_button').text().trim() === 'Choose LLM') {
+                    alert('Please select a model.');
+                    return;
+                }
+
+                if (!prompt) {
+                    alert('Please enter a prompt.');
+                    return;
+                }
+
+                try {
+                    setImageGenerationInProgress(true);
+                    
+                    // Create a Promise to handle the socket response
+                    const imageData = await new Promise((resolve, reject) => {
+                        socket.emit('prompt', { prompt, modelId });
+                        
+                        socket.once('generatedImage', (data) => {
+                            if (data && data.imageUrl) {
+                                resolve(data);
+                            } else {
+                                reject(new Error('Invalid image data received'));
+                            }
+                        });
+
+                        // Add timeout handling
+                        setTimeout(() => reject(new Error('Image generation timed out')), 30000);
+                    });
+
+                    await showGeneratedImage(imageData.imageUrl);
+                    
+                } catch (error) {
+                    console.error('Image generation failed:', error);
+                    //$('#uploadresult').text('Failed to generate image. Please try again.');
+                    setImageGenerationInProgress(false);
+                }
+            });
+
+
+
+
+
+            function setImageGenerationInProgress(inProgress) {
+                $('#run_button_spinner').toggle(inProgress);
+                $('#run_button_icon').toggle(!inProgress);
+                $('#run_button').prop('disabled', inProgress);
+            }
+
+            function showGeneratedImage(imageUrl) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    
+                    // Show loading spinner while image loads
+                    setImageGenerationInProgress(true);
+                    
+                    img.onload = function() {
+                        // Show the container and image
+                        $('#gen_imagebox').fadeIn();
+                        $('#genimage')
+                            .attr('src', imageUrl)
+                            .show()
+                            .on('load', () => {
+                                setImageGenerationInProgress(false);
+                                resolve();
+                            });
+                    };
+                    
+                    img.onerror = function() {
+                        setImageGenerationInProgress(false);
+                        reject(new Error('Failed to load image'));
+                    };
+                    
+                    img.src = imageUrl;
+                });
+            }
+
+
+
+
+            // Handle example prompt selection
+            $('#example_prompts').on('change', function () {
+                const selectedPrompt = $(this).val();
+                $('#prompt').val(selectedPrompt); // Set the selected prompt to the input field
+            });
+    
+            // Handle form submission for uploading generated image
+            $('#uploadform').on('submit', function (event) {
+                event.preventDefault();
+    
+                const model = $('#sample_button').data('modelid'); // Retrieve modelId
+                const prompt = $('#prompt').val().trim();
+    
+                if (!model || !prompt || !base64_encoded_result_image) {
+                    $('#uploadresult').text('Please complete all fields and generate an image first.');
+                    return;
+                }
+    
+                setFileUploadInProgress(true);
+    
+                const uploadParams = {
+                    model: model,
+                    prompt: prompt,
+                    imagebase64: base64_encoded_result_image,
+                };
+    
+                socket.emit('uploadimage', uploadParams);
+            });
+    
+            // Handle upload result from server
+            socket.on('uploadresult', async function (response) {
+                if (response.success) {
+                    $('#uploadresult').text('Thank you, your entry has been submitted.');
+    
+                    try {
+                        const orderNumberResponse = await fetch('/api/getOrderNumber', {
+                            method: 'GET',
+                            headers: { 'Content-Type': 'application/json' },
+                        });
+    
+                        const data = await orderNumberResponse.json();
+    
+                        if (data.orderNumber) {
+                            const vrUrl = `${window.location.origin}/360?orderNumber=${data.orderNumber}`;
+    
+                            // Generate QR Code
+                            $('#qrcode').empty();
+                            new QRCode(document.getElementById('qrcode'), {
+                                text: vrUrl,
+                                width: 200,
+                                height: 200,
+                                colorDark: '#000000',
+                                colorLight: '#ffffff',
+                                correctLevel: QRCode.CorrectLevel.H,
+                            });
+    
+                            // Update and show modal
+                            $('#orderNumberText').text(`Order Number: ${data.orderNumber}`);
+                            localStorage.setItem('currentOrderNumber', data.orderNumber);
+                            const qrModal = new bootstrap.Modal(document.getElementById('qrModal'));
+                            qrModal.show();
+    
+                            // Reset fields
+                            $('#prompt').val('');
+                            setButtonWidth('#sample_button', 'Choose LLM');
+                        } else {
+                            throw new Error('Failed to retrieve order number');
+                        }
+                    } catch (error) {
+                        console.error('Error fetching order number:', error);
+                        $('#uploadresult').text('Error retrieving order number. Please try again.');
+                    }
+                } else {
+                    $('#uploadresult').text('Submission failed. Please retry.');
+                }
+    
+                setFileUploadInProgress(false);
+            });
+    
+            // Helper function to show progress during file upload
+            function setFileUploadInProgress(inProgress) {
+                $('#upload_button_spinner').toggle(inProgress);
+                $('#upload_button_icon').toggle(!inProgress);
+                $('#upload_button').prop('disabled', inProgress);
+            }
+
+
+            // Handle "Choose Nova Reel Video" dropdown item selection
+            $('#video_selector .dropdown-item').on('click', function (e) {
+                e.preventDefault();
+
+                // Get the selected video URL from the dropdown item
+                const selectedVideoId = $(this).data('videoid');
+                const videoUrl = selectedVideoId; // This assumes `data-videoid` contains the full URL
+
+                // Open the video in a new window
+                const videoWindow = window.open('', '_blank', 'width=800,height=600');
+                videoWindow.document.write(`
+                    <html>
+                        <head>
+                            <title>Video Player</title>
+                            <style>
+                                body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: black; }
+                                video { max-width: 100%; max-height: 100%; }
+                            </style>
+                        </head>
+                        <body>
+                            <video controls autoplay>
+                                <source src="${videoUrl}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </body>
+                    </html>
+                `);
+                videoWindow.document.close();
+            });
+
+
+        });
+
+    // Add this to your existing JavaScript
+    function disableVideoDropdown() {
+        $('#video_button').addClass('disabled').prop('disabled', true).css({
+            'opacity': '0.6',
+            'pointer-events': 'none',
+            'background-color': '#a8a8a8'
+        });
+    }
+
+    // Call this function when page loads
+    $(document).ready(function() {
+        disableVideoDropdown();
+    });
+    </script>
+    
+
+
+    
+
+
+
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="qrModalLabel">Scan QR Code to View in VR</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="qrcode"></div>
+                    <p class="mt-3" id="orderNumberText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="handleModalClose()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Video Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video id="video_display" controls class="w-100">
+                        <source id="video_source" src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="aws-logo">
+        <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="Powered by AWS Cloud Computing"></a>
+    </div>
+</body>
+</html>
+

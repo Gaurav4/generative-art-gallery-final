@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VR 360 Fantasy</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('background.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .App {
+      text-align: center;
+    }
+
+    .App-header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      position: relative;
+      padding: 2rem;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: rgba(51, 51, 51, 0.8);
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .search-container input[type="text"] {
+      width: 200px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    .search-container button {
+      background-color: #61dafb;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-container button:hover {
+      background-color: #21a1f1;
+    }
+
+    .carousel-image-container {
+      position: relative;
+      width: 75%;
+      height: 75vh;
+      margin: 0 auto;
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    .aws-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .aws-logo img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+  <div class="App">
+    <header class="App-header">
+      <h1>VR 360 Fantasy</h1>
+      <div class="search-container">
+        <input type="text" id="orderNumber" placeholder="Enter Order Number" />
+        <button onclick="fetchAndDisplayImage()">Load Image</button>
+      </div>
+      <div class="carousel-image-container">
+        <a-scene embedded renderer="antialias: true; colorManagement: true; highRefreshRate: true;">
+          <a-sky id="panorama" src="" rotation="0 -130 0" material="minFilter: linear; magFilter: linear"></a-sky>
+        </a-scene>
+        <div id="image-caption" class="image-caption"></div>
+      </div>
+    </header>
+  </div>
+
+  <script>
+    async function fetchAndDisplayImage() {
+      const orderNumber = document.getElementById('orderNumber').value;
+      if (!orderNumber) {
+        alert("Please enter an order number");
+        return;
+      }
+  
+      try {
+        const response = await fetch(`/getImagePath360?orderNumber=${orderNumber}`);
+        const data = await response.json();
+  
+        console.log('Server response:', data); // Log the server response
+  
+        if (data.error) {
+          alert(data.error);
+          return;
+        }
+  
+        // Use the direct S3 URL from the server
+        const imageUrl = data.imageUrl;
+  
+        // Update the A-Frame sky element with the new image
+        const skyElement = document.getElementById('panorama');
+        skyElement.setAttribute('src', imageUrl);
+  
+        const captionElement = document.getElementById('image-caption');
+        captionElement.textContent = data.prompt || 'No description available';
+      } catch (error) {
+        console.error('Error fetching image:', error);
+        alert('Failed to load image');
+      }
+    }
+  </script>
+  
+
+  <div class="aws-logo">
+    <a href="https://aws.amazon.com/what-is-cloud-computing">
+      <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing">
+    </a>
+  </div>
+</body>
+</html>
+
