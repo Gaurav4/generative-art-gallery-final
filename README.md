@@ -55,7 +55,7 @@ To grant Bedrock access to your identity, you can:
 6. Optional: If you plan to use the app for running a contest, provide your name and other details to submit the images. These images will be saved to the S3 bucket created in Step 2. The submission details (name, email, prompt and S3 file location) will be saved to a DynamoDB table.
 
 ## Authors and acknowledgment
-This project is currently manage by Abhishek Srivastav from Amazon Web Services.
+This project is currently manage by Gaurav Parekh from Amazon Web Services.
 
 ## Contributing
 We welcome community contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
